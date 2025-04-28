@@ -4,10 +4,11 @@
 }
 
 /* ===== GENERAL ===== */
+/* Aplicamos Box Model general (margin, padding) y fondo de pantalla */
 body {
   margin: 0;
   padding: 0;
-  font-family: "kallistobold", "Trebuchet MS", sans-serif;
+  font-family: "kallistobold", "Trebuchet MS";
   background-image: url(../medios/Plantillas_ladrillo-07.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -20,16 +21,19 @@ body {
   flex-direction: column;
 }
 
+/* Enlaces generales */
 a {
   color: aliceblue;
   text-decoration: none;
 }
 
+/* ===== Pseudoclase :hover para enlaces ===== */
 a:hover {
   text-decoration: underline;
 }
 
 /* ===== HEADER ===== */
+/* Flexbox en el encabezado */
 .encabezado {
   display: flex;
   align-items: center;
@@ -37,16 +41,20 @@ a:hover {
   padding: 2rem;
 }
 
+/* Logo adaptado con Box Model */
 .logo-efe {
-  width: 450px; /* DESKTOP: más grande */
+  width: 350px;
   height: auto;
   flex-shrink: 0;
+  transform: scale(1.6);
 }
 
+/* Caja de texto */
 .texto-efe {
   max-width: 700px;
 }
 
+/* Título principal */
 .titulo-ppal {
   font-size: 2rem;
   margin: 0;
@@ -54,6 +62,7 @@ a:hover {
 }
 
 /* ===== MENÚ PRINCIPAL ===== */
+/* Flexbox aplicado al menú lateral */
 .menu-lateral {
   display: flex;
   align-items: stretch;
@@ -61,6 +70,7 @@ a:hover {
   gap: 2rem;
 }
 
+/* Lista del menú principal */
 .nav-principal {
   list-style: none;
   padding: 0;
@@ -71,6 +81,7 @@ a:hover {
   z-index: 10;
 }
 
+/* Estilo de los botones y links principales */
 .nav-principal li a,
 .btn-actividades {
   display: block;
@@ -86,6 +97,7 @@ a:hover {
   text-align: center;
 }
 
+/* ===== Pseudoclase :hover en el menú principal ===== */
 .nav-principal li a:hover,
 .btn-actividades:hover {
   background-color: #00f0ff;
@@ -94,12 +106,13 @@ a:hover {
   transform: translateY(-3px);
 }
 
-/* ===== SUBMENÚ ACTIVIDADES (index.html) ===== */
+/* ===== SUBMENÚ ACTIVIDADES (GRID aplicado) ===== */
 .submenu-actividades {
   padding: 2rem;
   flex: 1;
 }
 
+/* Lista de actividades usando GRID de 3 columnas */
 .submenu-actividades ul {
   list-style: none;
   padding: 0;
@@ -109,6 +122,7 @@ a:hover {
   gap: 1rem;
 }
 
+/* Estilo de cada actividad */
 .submenu-actividades li a {
   display: block;
   padding: 0.8rem 1.2rem;
@@ -122,6 +136,7 @@ a:hover {
   transition: all 0.3s ease;
 }
 
+/* ===== Pseudoclase :hover para cada actividad ===== */
 .submenu-actividades li a:hover {
   background-color: #ff66cc;
   color: black;
@@ -129,7 +144,7 @@ a:hover {
   transform: translateY(-3px);
 }
 
-/* ===== CAJAS GENERALES (Ubicación, Sobre Efe, Contacto) ===== */
+/* ===== CAJAS GENERALES (aplicando Box Model) ===== */
 .caja-mapa,
 .caja-sobre-efe,
 .caja-contacto {
@@ -138,28 +153,53 @@ a:hover {
   border: 2px solid #00f0ff;
   border-radius: 15px;
   box-shadow: 0 0 20px #00f0ff;
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* ===== FORMULARIO CONTACTO ===== */
+/* Mapa adaptado al Box Model */
+.caja-mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Estilos de texto en Sobre Efe */
+.caja-sobre-efe h2 {
+  font-size: 1.7rem;
+  color: #ff66cc;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.caja-sobre-efe p {
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.8;
+  padding: 0 2rem;
+}
+
+/* Formulario de contacto estructurado */
 .formulario-contacto {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
   gap: 1rem;
   width: 100%;
   max-width: 100%;
 }
 
+/* Labels del formulario */
 .formulario-contacto label {
   font-weight: bold;
-  text-align: left;
-  padding-left: 0.5rem;
+  text-align: right;
+  padding-right: 0.5rem;
   text-shadow: 0 0 2px white, 0 0 4px #f0f, 0 0 6px #f0f;
 }
 
+/* Inputs del formulario */
 .formulario-contacto input[type="text"],
 .formulario-contacto input[type="email"],
 .formulario-contacto input[type="tel"] {
@@ -173,6 +213,7 @@ a:hover {
   outline: none;
 }
 
+/* Focus en inputs */
 .formulario-contacto input[type="text"]:focus,
 .formulario-contacto input[type="email"]:focus,
 .formulario-contacto input[type="tel"]:focus {
@@ -181,11 +222,14 @@ a:hover {
   box-shadow: 0 0 8px #ff66cc;
 }
 
+/* Botón enviar */
 .formulario-boton {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
+/* Botón enviar estilizado */
 .formulario-boton input[type="submit"] {
   width: 100%;
   max-width: 120px;
@@ -199,82 +243,11 @@ a:hover {
   transition: all 0.3s ease;
 }
 
+/* Hover del botón enviar */
 .formulario-boton input[type="submit"]:hover {
   background-color: #ff66cc;
   box-shadow: 0 0 10px #ff66cc;
   transform: translateY(-3px);
-}
-
-/* ===== PÁGINAS DE ACTIVIDADES (Galería Pole Sport) ===== */
-.contenedor-pole-sport {
-  flex: 1;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.titulo-actividad {
-  font-size: 2.5rem;
-  color: #00f0ff;
-  margin-bottom: 2rem;
-}
-
-.descripcion-actividad {
-  font-size: 1.2rem;
-  margin-bottom: 3rem;
-  padding: 0 2rem;
-  max-width: 800px;
-  text-align: center;
-}
-
-.galeria-actividad {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.galeria-actividad img {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  border: 2px solid #00f0ff;
-  box-shadow: 0 0 10px #00f0ff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.galeria-actividad img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #ff66cc;
-}
-
-/* ===== BOTÓN VOLVER AL INICIO ===== */
-.boton-volver {
-  margin-top: 3rem;
-  text-align: center;
-}
-
-.boton-volver a {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: #00f0ff;
-  color: black;
-  font-weight: bold;
-  font-size: 1.1rem;
-  border-radius: 12px;
-  text-shadow: none;
-  box-shadow: 0 0 10px #00f0ff;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.boton-volver a:hover {
-  background-color: #ff66cc;
-  box-shadow: 0 0 15px #ff66cc;
-  color: black;
-  transform: scale(1.05);
 }
 
 /* ===== FOOTER ===== */
@@ -286,48 +259,31 @@ footer {
   margin-top: auto;
 }
 
-/* ===== RESPONSIVE (Mobile) ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .encabezado {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-  }
-
-  .logo-efe {
-    width: 350px; /* MOBILE: más grande también */
-  }
-
-  .texto-efe {
-    max-width: 90%;
-  }
-
+  /* Menú lateral en columna */
   .menu-lateral {
     flex-direction: column;
-    align-items: center;
   }
 
+  /* Submenú de actividades en 1 columna */
   .submenu-actividades ul {
     grid-template-columns: 1fr;
   }
 
+  /* Ajustes en cajas */
   .caja-mapa,
   .caja-sobre-efe,
   .caja-contacto {
     padding: 1rem;
   }
 
+  /* Ajuste formulario en móviles */
   .formulario-contacto {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .formulario-boton {
     margin-top: 1rem;
-  }
-
-  .galeria-actividad {
-    flex-direction: column;
-    align-items: center;
   }
 }
