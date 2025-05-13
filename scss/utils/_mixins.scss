@@ -1,0 +1,12 @@
+
+@mixin sombra-hover($color) {
+  box-shadow: 0 0 10px $color;
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+}
+
+@mixin centrado-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

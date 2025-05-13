@@ -4,63 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio - Efe Pole Estudio</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <!-- Bootstrap primero -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CSS personalizado después -->
+  <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
 
-<!-- ===== Encabezado usando Flexbox (Box Model también aplicado) ===== -->
+<!-- ========== HEADER ========== -->
 <header>
   <div class="encabezado">
     <a href="./index.html">
       <img src="./medios/logo header.png" alt="Logo Efe Pole" class="logo-efe">
     </a>
+
     <div class="texto-efe">
       <h1 class="titulo-ppal"><a href="./index.html">Efe Pole Estudio</a></h1>
       <h3>Centro de deportes y recreación - Mendoza, Argentina.</h3>
       <h3>Clases Presenciales y Online</h3>
-      <h3>
-        <a href="https://www.instagram.com/efepole.estudio/" target="_blank">
-          <i class="fab fa-instagram"></i> @flor.efepole
-        </a>
-      </h3>
-      <h3>
-        <a href="https://wa.me/message/XDZZH4LJIYMRL1" target="_blank">
-          Mensaje de WhatsApp
-        </a>
-      </h3>
+      <h3><a href="https://www.instagram.com/efepole.estudio/" target="_blank">@efepole.estudio</a></h3>
+      <h3><a href="https://wa.me/message/XDZZH4LJIYMRL1" target="_blank">Mensaje de WhatsApp</a></h3>
     </div>
   </div>
 </header>
 
-<!-- ===== Menú lateral usando Flexbox ===== -->
-<nav class="menu-lateral">
-
-  <!-- ===== Menú principal con pseudoclases :hover en los enlaces ===== -->
-  <ul class="nav-principal">
-    <li><a href="./index.html" class="btn-actividades">Actividades</a></li>
-    <li><a href="./ubicacion.html">Ubicación</a></li>
-    <li><a href="./sobre_efe.html">Sobre Efe</a></li>
-    <li><a href="./contacto.html">Contacto</a></li>
-  </ul>
-
-  <!-- ===== Submenú de actividades usando Grid de 3 columnas y pseudoclases :hover ===== -->
-  <div class="submenu-actividades">
-    <ul>
-      <li><a href="./actividades/pole_sport.html">POLE SPORT</a></li>
-      <li><a href="./actividades/pole_flow.html">POLE FLOW</a></li>
-      <li><a href="./actividades/pole_exoticflow.html">POLE EXOTIC FLOW</a></li>
-      <li><a href="./actividades/pole_hard.html">POLE HARD</a></li>
-      <li><a href="./actividades/flexi_pole.html">FLEXI POLE</a></li>
-      <li><a href="./actividades/flex_activa.html">FLEX ACTIVA</a></li>
-      <li><a href="./actividades/floor_work.html">FLOORWORK</a></li>
-      <li><a href="./actividades/prepa_fisica.html">PREPARACIÓN FÍSICA</a></li>
+<!-- ========== MENÚ LATERAL PRINCIPAL ========== -->
+<main>
+  <nav class="menu-lateral">
+    <!-- Menú principal -->
+    <ul class="nav-principal">
+      <li><a href="./index.html" class="btn-actividades">Actividades</a></li>
+      <li><a href="./lista_principal/ubicacion.html">Ubicación</a></li>
+      <li><a href="./lista_principal/sobre_efe.html">Sobre Efe</a></li>
+      <li><a href="./lista_principal/contacto.html">Contacto</a></li>
     </ul>
-  </div>
 
-</nav>
+    <!-- Submenú de actividades - ahora con FLEX -->
+    <div class="submenu-actividades">
+      <ul>
+        <li><a href="./lista_de_actividades/pole_sport.html">POLE SPORT</a></li>
+        <li><a href="./lista_de_actividades/pole_flow.html">POLE SPORT FLOW</a></li>
+        <li><a href="./lista_de_actividades/pole_exoticflow.html">EXOTIC POLE FLOW</a></li>
+      </ul>
+    </div>
+  </nav>
+</main>
 
-<!-- ===== Footer final con Box Model aplicado ===== -->
-<footer>© 2025 Mi proyecto Web</footer>
+<!-- ========== FOOTER ========== -->
+<footer>
+  <p>© 2025 Proyecto Web by Chinita -.-</p>
+</footer>
 
 </body>
 </html>

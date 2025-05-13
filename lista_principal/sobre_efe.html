@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre Efe - Efe Pole Estudio</title>
-  <!-- Vinculación al CSS externo -->
-  <link rel="stylesheet" href="../css/style.css">
+ <!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- CSS personalizado -->
+<link rel="stylesheet" href="../css/estilos.css">
 </head>
-
 <body>
 
 <!-- ========== HEADER (Flexbox aplicado) ========== -->
@@ -51,31 +52,18 @@
     <li><a href="./sobre_efe.html">Sobre Efe</a></li>
     <li><a href="./contacto.html">Contacto</a></li>
   </ul>
-
-  <!-- Caja "Sobre Efe" - Box Model aplicado -->
-  <div class="caja-sobre-efe">
-    <h2>Sobre Efe Pole Estudio</h2>
-
-    <!-- Párrafos descriptivos - Correcto uso de nesting y estructura -->
-    <p>
-      Efe Pole Estudio nace como un espacio de transformación, donde el arte del movimiento y la fuerza del espíritu se encuentran.
-    </p>
-    <p>
-      Creemos en el poder de cada persona para crecer, superar sus límites y conectar con su verdadera esencia a través del deporte y la expresión corporal.
-    </p>
-    <p>
-      En nuestro estudio, cada entrenamiento es una celebración de la autenticidad, la pasión y la resiliencia.
-    </p>
-    <p>
-      Fomentamos un entorno donde el respeto, el apoyo mutuo y el crecimiento personal son nuestros pilares.
-    </p>
-    <p>
-      Ya sea en clases presenciales o online, acompañamos a quienes se animan a desafiarse, abrazar su energía y descubrir su mejor versión en cada vuelo, en cada caída, en cada conquista.
-    </p>
-    <p>
-      Bienvenidxs a Efe Pole Estudio, donde el arte y la fuerza se convierten en alas.
-    </p>
+<!-- Caja de descripción "Sobre Efe" - Bootstrap aplicado -->
+ <div class="container mt-0 pt-0">
+  <div class="p-4 border border-info rounded shadow-lg bg-transparent text-white">
+    <h2 class="text-center mb-4">Sobre Efe Pole Estudio</h2>
+    <p class="mb-2">Efe Pole Estudio nace como un espacio de transformación</p>
+    <p class="mb-2">Creemos en el poder de cada persona para crecer</p>
+    <p class="mb-2">En nuestro estudio, cada entrenamiento es una celebración</p>
+    <p class="mb-2">Fomentamos un entorno donde el respeto y el apoyo mutuo son pilares</p>
+    <p class="mb-2">Ya sea en clases presenciales o online, acompañamos a quienes se animan</p>
+    <p class="mb-2">Bienvenidxs a Efe Pole Estudio, donde el arte y la fuerza se convierten en alas.</p>
   </div>
+</div>
 
 </nav>
 

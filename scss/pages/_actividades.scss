@@ -1,0 +1,96 @@
+@use '../utils/responsive' as *;
+
+.submenu-actividades {
+  padding: 2rem;
+  flex: 1;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      a {
+        display: block;
+        padding: 0.8rem 1.2rem;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        text-shadow: 0 0 2px white, 0 0 4px #f0f, 0 0 6px #f0f;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #ff66cc;
+          color: black;
+          box-shadow: 0 0 10px #ff66cc;
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    ul {
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        width: 90%;
+      }
+    }
+  }
+}
+
+.titulo-actividad {
+  font-size: 2.5rem;
+  color: #00f0ff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.descripcion-actividad {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.galeria-actividad {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #00f0ff;
+    box-shadow: 0 0 10px #00f0ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #ff66cc;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 90%;
+    }
+  }
+}

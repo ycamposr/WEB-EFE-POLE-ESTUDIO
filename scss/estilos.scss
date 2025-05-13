@@ -1,0 +1,18 @@
+@use 'utils/variables';
+@use 'utils/mixins';
+@use 'utils/responsive';
+
+@use 'base/reset';
+@use 'base/typography';
+
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/main';
+
+@use 'components/botones';
+@use 'components/formulario';
+@use 'components/galeria';
+
+@use 'pages/actividades';
+
+	

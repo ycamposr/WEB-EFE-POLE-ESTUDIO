@@ -1,0 +1,32 @@
+@use '../utils/responsive';
+
+.galeria-actividad {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #00f0ff;
+    box-shadow: 0 0 10px #00f0ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #ff66cc;
+    }
+  }
+
+  @include responsive.mobile {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 90%;
+    }
+  }
+}
+

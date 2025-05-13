@@ -1,0 +1,73 @@
+@use '../utils/responsive' as *;
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+
+  label {
+    font-weight: bold;
+    text-align: left;
+    padding-left: 0.5rem;
+    text-shadow: 0 0 2px white, 0 0 4px #f0f, 0 0 6px #f0f;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #00f0ff;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+
+    &:focus {
+      background-color: rgba(0, 240, 255, 0.2);
+      border-color: #ff66cc;
+      box-shadow: 0 0 8px #ff66cc;
+    }
+  }
+
+  .formulario-boton {
+    display: flex;
+    justify-content: center;
+
+    input[type="submit"] {
+      width: 100%;
+      max-width: 120px;
+      padding: 1rem;
+      background-color: #00f0ff;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #ff66cc;
+        box-shadow: 0 0 10px #ff66cc;
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  @include mobile {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 70%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .formulario-boton {
+      margin-top: 1rem;
+    }
+  }
+}

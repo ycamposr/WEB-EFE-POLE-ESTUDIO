@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto - Efe Pole Estudio</title>
   <!-- Vinculamos el CSS externo -->
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/estilos.css">
 </head>
-
 <body>
 
 <!-- ========== HEADER (Flexbox aplicado) ========== -->
@@ -41,9 +40,8 @@
   </div>
 </header>
 
-<!-- ========== MENÚ LATERAL PRINCIPAL (Flexbox aplicado) ========== -->
+<!-- ========== MENÚ LATERAL PRINCIPAL ========== -->
 <nav class="menu-lateral">
-
   <!-- Menú principal -->
   <ul class="nav-principal">
     <li><a href="../index.html" class="btn-actividades">Actividades</a></li>
@@ -52,33 +50,34 @@
     <li><a href="./contacto.html">Contacto</a></li>
   </ul>
 
-  <!-- Caja de formulario de contacto (Box Model aplicado) -->
-  <div class="caja-contacto">
-    <form action="#" method="post" class="formulario-contacto">
+  <!-- Contenedor necesario para aplicar estilos de contacto.scss -->
+  <div class="contacto">
+    <!-- Caja de formulario de contacto -->
+    <div class="caja-contacto">
+      <form action="#" method="post" class="formulario-contacto">
 
-      <!-- Campo Nombre -->
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" pattern="[A-Za-z\s]+" required>
+        <!-- Campo Nombre -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" pattern="[A-Za-z\s]+" required>
 
-      <!-- Campo Teléfono -->
-      <label for="telefono">Teléfono:</label>
-      <input type="text" id="telefono" name="telefono" pattern="[0-9]+" required>
+        <!-- Campo Teléfono -->
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" pattern="[0-9]+" required>
 
-      <!-- Botón Enviar -->
-      <div class="formulario-boton">
-        <input type="submit" value="Enviar">
-      </div>
+        <!-- Botón Enviar -->
+        <div class="formulario-boton">
+          <input type="submit" value="Enviar">
+        </div>
 
-    </form>
+      </form>
+    </div>
   </div>
-
 </nav>
 
 <!-- ========== FOOTER ========== -->
 <footer>
-  © 2025 Proyecto Web by Chinita -.-
+  © 2025 Proyecto Web by Chinita -.-  
 </footer>
 
 </body>
 </html>
-
