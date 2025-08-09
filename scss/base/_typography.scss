@@ -1,0 +1,29 @@
+/* ===== TIPOGRAFÍA Y COLOR GENERAL ===== */
+
+@font-face {
+  font-family: "kallistobold";
+  src: url("../font/kallistobold.otf") format("opentype");
+}
+
+body {
+  font-family: "kallistobold", "Trebuchet MS", sans-serif;
+  background-image: url("../medios/Plantillas_ladrillo-07.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  text-shadow: 0 0 2px white, 0 0 4px #f0f, 0 0 6px #f0f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: aliceblue;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

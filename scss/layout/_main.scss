@@ -1,0 +1,14 @@
+@use '../utils/responsive' as *;
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: white;
+  margin-top: auto;
+
+  @include mobile {
+    padding: 0.8rem;
+    font-size: 0.85rem;
+  }
+}

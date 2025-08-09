@@ -1,0 +1,15 @@
+
+// Colores base
+$color-principal: #00f0ff;
+$color-secundario: #ff66cc;
+$color-texto: white;
+$color-link: aliceblue;
+$color-fondo-transparente: rgba(255, 255, 255, 0.05);
+
+// Tipografía
+$fuente-principal: "kallistobold", "Trebuchet MS", sans-serif;
+
+// Sombras
+$sombra-texto: 0 0 2px white, 0 0 4px #f0f, 0 0 6px #f0f;
+$sombra-hover: 0 0 10px $color-principal;
+$sombra-hover-alt: 0 0 10px $color-secundario;

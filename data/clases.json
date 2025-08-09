@@ -1,0 +1,22 @@
+{
+  "clases": [
+    { 
+      "id": "pole-sport", 
+      "nombre": "Pole Sport", 
+      "nivel": "multinivel", 
+      "sala": "Sala 3" 
+    },
+    { 
+      "id": "pole-flow",  
+      "nombre": "Pole Flow",  
+      "nivel": "multinivel", 
+      "sala": "Sala 2" 
+    },
+    { 
+      "id": "exotic-flow",
+      "nombre": "Exotic Flow",
+      "nivel": "multinivel",
+      "sala": "Sala 2" 
+    }
+  ]
+}

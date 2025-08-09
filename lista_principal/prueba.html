@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clase Gratis | Efe Pole Estudio</title>
+
+  <!-- Meta descripción para SEO -->
+  <meta name="description" content="Reservá tu clase gratuita en Efe Pole Estudio. Elegí día, disciplina y generá tu ticket personalizado.">
+
+  <!-- Framework CSS Bootstrap para facilitar diseño responsive -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Hoja de estilos personalizada del proyecto -->
+  <link rel="stylesheet" href="../css/estilos.css" />
+
+  <!-- Plugin de calendario interactivo (Flatpickr) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+
+  <!-- Lógica del simulador, enlazada con defer para ejecutar al final -->
+  <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+
+<!-- ======= HEADER con logo y enlaces de contacto ======= -->
+<header>
+  <div class="encabezado">
+    <!-- Logo enlazado al inicio -->
+    <a href="../index.html">
+      <img src="../medios/logo header.png" alt="Logo Efe Pole" class="logo-efe" />
+    </a>
+
+    <!-- Información institucional -->
+    <div class="texto-efe">
+      <h1 class="titulo-ppal"><a href="../index.html">Efe Pole Estudio</a></h1>
+      <h3>Centro de deportes y recreación - Mendoza, Argentina.</h3>
+      <h3>Clases Presenciales y Online</h3>
+      <h3><a href="https://www.instagram.com/efepole.estudio/" target="_blank">@efepole.estudio</a></h3>
+      <h3><a href="https://wa.me/message/XDZZH4LJIYMRL1" target="_blank">Mensaje de WhatsApp</a></h3>
+    </div>
+  </div>
+</header>
+
+<!-- ======= MAIN con menú lateral y ticketera ======= -->
+<main>
+
+  <!-- Menú de navegación lateral -->
+  <div class="menu-lateral">
+    <ul class="nav-principal">
+      <li><a href="../index.html" class="btn-actividades">Actividades</a></li>
+      <li><a href="./ubicacion.html">Ubicación</a></li>
+      <li><a href="./sobre_efe.html">Sobre Efe</a></li>
+      <li><a href="./contacto.html">Contacto</a></li>
+      <li><a href="./clase_gratis.html">Clase Gratis</a></li>
+    </ul>
+
+    <!-- Ticketera de reserva de clases -->
+    <section class="caja-contacto seccion-reserva" id="simulador">
+
+      <!-- Título y descripción con enlace a horarios -->
+      <h2 class="titulo-actividad">Agendá tu clase gratis</h2>
+      <p class="descripcion-actividad">
+        Mirá nuestros horarios actualizados 
+        <!-- Enlace a la nueva página horarios.html -->
+        <a href="horarios.html" target="_blank" style="color:#00f0ff; text-decoration: underline;">AQUÍ</a>, 
+        y generá tu ticket de contacto. ¡Te vamos a confirmar lo antes posible tu clase gratis!
+      </p>
+
+      <!-- Formulario que captura los datos del usuario -->
+      <form id="form-ticket" class="formulario-contacto">
+
+        <!-- Campo de nombre -->
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <!-- Desplegable con clases disponibles -->
+        <label for="clase">Seleccioná una clase:</label>
+        <select id="clase" name="clase" required>
+          <option value="">-- Elegí una opción --</option>
+          <option value="Pole Sport">Pole Sport</option>
+          <option value="Pole Flow">Pole Flow</option>
+          <option value="Exotic Flow">Exotic Flow</option>
+        </select>
+
+        <!-- Calendario para seleccionar fecha -->
+        <label for="fecha">Fecha de la clase:</label>
+        <input type="text" id="fecha" name="fecha" required />
+
+        <!-- Botón de envío -->
+        <div class="formulario-boton">
+          <input type="submit" value="Ok" />
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <!-- Zona donde se renderiza dinámicamente el ticket generado con JS -->
+  <section id="ticket-generado"></section>
+</main>
+
+<!-- ======= FOOTER con autoría ======= -->
+<footer>
+  <p>© 2025 Proyecto Web by Chinita -.-</p>
+</footer>
+
+</body>
+</html>
